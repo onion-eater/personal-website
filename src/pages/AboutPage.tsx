@@ -1,8 +1,7 @@
 function AboutPage() {
   return (
     <>
-      <h1>Hi, my name is Nolan.</h1>
-      <p>I am currently studying math at Carnegie Mellon University</p>
+      <h1>coming soon twin</h1>
     </>
   );
 }
