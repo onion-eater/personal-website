@@ -1,15 +1,1 @@
 @import "tailwindcss";
-
-:root {
-	--navbar-height: 4rem;
-}
-
-body {
-	padding-top: var(--navbar-height);
-}
-.navbar-button {
-	background-color: rgba(0,0,0,0.9); /* near-opaque fallback */
-}
-.navbar-bg {
-	background-color: rgba(0,0,0,0.2) !important;
-}
