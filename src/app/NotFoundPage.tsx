@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 
-function NotFoundPage() {
+export default function NotFoundPage() {
   return (
     <>
       <Navbar />
@@ -10,5 +10,3 @@ function NotFoundPage() {
     </>
   );
 }
-
-export default NotFoundPage;

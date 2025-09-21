@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 // import { useNavigate } from "react-router";
 import Model from "../components/Model";
 
-function HomePage() {
+export default function HomePage() {
   return (
     <>
       <Navbar />
@@ -16,11 +16,10 @@ function HomePage() {
         >
           <Model />
           <OrbitControls enablePan={false} enableZoom={false} />
-          <AsciiRenderer resolution={0.2} invert={false} characters=" n" />
+          <AsciiRenderer resolution={0.2} invert={false} characters=" nj" />
+          <directionalLight position={[0, 0, 5]} intensity={1.5} />
         </Canvas>
       </div>
     </>
   );
 }
-
-export default HomePage;

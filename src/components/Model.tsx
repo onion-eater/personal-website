@@ -3,13 +3,19 @@ import { useLoader, useFrame, useThree } from "@react-three/fiber";
 import { useRef } from "react";
 import * as THREE from "three";
 
-function Model() {
+export default function Model() {
   const meshRef = useRef<THREE.Mesh>(null!);
   const { viewport } = useThree();
 
   useFrame((_, delta) => {
     meshRef.current.rotation.y += delta * 0.2;
   });
+  // mxs.de/textstl/ 
+  // weight = 400?
+  // font = ??? on pc i think
+  // size = 72?
+  // width = 10
+  
   const geometry = useLoader(STLLoader, "/models/output.stl");
 
   return (
@@ -19,4 +25,3 @@ function Model() {
   );
 }
 
-export default Model;
