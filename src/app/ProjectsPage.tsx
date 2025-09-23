@@ -1,13 +1,10 @@
-import Music from "../components/Music";
 import Navbar from "../components/Navbar";
 
 export default function ProjectsPage() {
   return(
-    <>
+    <div className="bg-black flex justify-center items-center h-screen w-screen">
     <Navbar /> 
-    <div className="bg-black text-white min-h-screen flex justify-center items-center">
-      <Music />
+    <p className="text-white">wip twin</p>
     </div>
-    </>
   );
 }

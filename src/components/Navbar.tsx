@@ -15,7 +15,7 @@ export default function Navbar() {
               About
             </a>
             <a href="/projects" className="text-white hover:text-blue-500">
-              Last Played
+              Projects
             </a>
           </div>
 
@@ -37,7 +37,7 @@ export default function Navbar() {
             About
           </a>
           <a href="/projects" className="block text-white hover:text-blue-500">
-            Last Played
+            Projects
           </a>
         </div>
       )}
