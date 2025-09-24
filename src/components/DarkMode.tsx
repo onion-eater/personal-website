@@ -12,8 +12,8 @@ type props = {
 };
 
 export const DarkMode = ({ className, isDarkMode, onToggle }: props) => {
-
   const buttonRef = useRef<HTMLButtonElement | null>(null);
+
   const changeTheme = async () => {
     if (!buttonRef.current) return;
 
@@ -22,6 +22,10 @@ export const DarkMode = ({ className, isDarkMode, onToggle }: props) => {
         onToggle();
       });
     }).ready;
+    document.documentElement.style.setProperty(
+      "--bg",
+      isDarkMode ? "black" : "white"
+    );
 
     const { top, left, width, height } =
       buttonRef.current.getBoundingClientRect();
@@ -40,7 +44,7 @@ export const DarkMode = ({ className, isDarkMode, onToggle }: props) => {
         ],
       },
       {
-        duration: 700,
+        duration: 500,
         easing: "ease-in-out",
         pseudoElement: "::view-transition-new(root)",
       }

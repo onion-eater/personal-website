@@ -1,8 +1,8 @@
 import Navbar from "../components/Navbar";
-import { useState } from "react";
+import useLocalStorage from "use-local-storage";
 
 export default function NotFoundPage() {
-  const [isDark, setIsDark] = useState<boolean>(true);
+  const [isDark, setIsDark] = useLocalStorage<boolean>("isDark", true);
 
   return (
     <div className={isDark ? "dark" : ""}>

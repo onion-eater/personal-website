@@ -17,7 +17,7 @@ export default function Model() {
   // width = 10
   
   const geometry = useLoader(STLLoader, "/models/output.stl");
-
+  
   return (
     <mesh geometry={geometry} scale={viewport.width / 400} ref={meshRef}>
       <meshStandardMaterial color="black" />

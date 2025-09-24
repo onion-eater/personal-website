@@ -1,20 +1,22 @@
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, AsciiRenderer } from "@react-three/drei";
+
+import useLocalStorage from "use-local-storage";
+
 import Navbar from "../components/Navbar";
 import Music from "../components/Music";
-// import { useNavigate } from "react-router";
 import Model from "../components/Model";
-import { useState } from "react";
+
 
 export default function HomePage() {
-  const [isDark, setIsDark] = useState<boolean>(true);
+  const [isDark, setIsDark] = useLocalStorage<boolean>("isDark", true);
 
   return (
     <div>
       <Navbar isDark={isDark} onToggle={() => setIsDark((prev) => !prev)} />
       <Music isDark={isDark} />
       <Canvas
-        className="bg-black w-full h-full"
+        className={`${isDark ? "bg-black" : "bg-white"} w-full h-full`}
         style={{ position: "fixed", inset: 0, zIndex: 10 }}
         dpr={1}
       >

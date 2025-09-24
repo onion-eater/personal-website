@@ -1,8 +1,8 @@
-import { useState } from "react";
+import useLocalStorage from "use-local-storage";
 import Navbar from "../components/Navbar";
 
 export default function AboutPage() {
-  const [isDark, setIsDark] = useState<boolean>(true);
+  const [isDark, setIsDark] = useLocalStorage<boolean>("isDark", true);
 
   return (
     <div className={isDark ? "dark" : ""}>
