@@ -1,27 +1,30 @@
 import { useState } from "react";
+import { DarkMode } from "./DarkMode";
 
-export default function Navbar() {
+export default function Navbar({ isDark, onToggle }: { isDark: boolean, onToggle: () => void}) {
   const [isOpen, setIsOpen] = useState(false);
+  console.log({isDark});
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/0">
+    <nav className={`fixed top-0 left-0 right-0 z-50 ${isDark ? "dark" : ""}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-center h-16 items-center relative">
-          <div className="hidden md:flex space-x-20">
-            <a href="/" className="text-white hover:text-blue-500">
+          <div className="hidden md:flex space-x-20 text-black dark:text-white">
+            <a href="/" className="hover:text-blue-500">
               Home
             </a>
-            <a href="/about" className="text-white hover:text-blue-500">
+            <a href="/about" className="hover:text-blue-500">
               About
             </a>
-            <a href="/projects" className="text-white hover:text-blue-500">
+            <a href="/projects" className="hover:text-blue-500">
               Projects
             </a>
+            <DarkMode className="" isDarkMode={isDark} onToggle={onToggle} />
           </div>
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden absolute left-0 text-white focus:outline-none bg-black px-2 py-1 rounded"
+            className="md:hidden absolute left-0 text-black focus:outline-none bg-white px-2 py-1 rounded dark:bg-black dark:text-white"
             aria-label="Toggle menu"
           >
             ☰
@@ -29,16 +32,17 @@ export default function Navbar() {
         </div>
       </div>
       {isOpen && (
-        <div className="md:hidden px-4 pb-4 space-y-2">
-          <a href="/" className="block text-white hover:text-blue-500">
+        <div className="md:hidden px-4 pb-4 space-y-2 block flex flex-col text-black dark:text-white">
+          <a href="/" className="hover:text-blue-500">
             Home
           </a>
-          <a href="/about" className="block text-white hover:text-blue-500">
+          <a href="/about" className="hover:text-blue-500">
             About
           </a>
-          <a href="/projects" className="block text-white hover:text-blue-500">
+          <a href="/projects" className="hover:text-blue-500">
             Projects
           </a>
+          <DarkMode className="" isDarkMode={isDark} onToggle={onToggle} />
         </div>
       )}
     </nav>
