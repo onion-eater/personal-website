@@ -8,7 +8,7 @@ export default function ProjectsPage() {
     <div className={isDark ? "dark" : ""}>
       <div className="bg-white dark:bg-black flex justify-center items-center h-screen w-screen">
         <Navbar isDark={isDark} onToggle={() => setIsDark((prev) => !prev)} />
-        <p className="text-black dark:text-white">wip twin</p>
+        <p className="text-black dark:text-white">BIG THINGS BREWING... STAY TUNED...</p>
       </div>
     </div>
   );
