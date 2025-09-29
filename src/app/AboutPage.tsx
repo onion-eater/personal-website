@@ -16,7 +16,7 @@ export default function AboutPage() {
         <br></br>
         <h2>Find Me Here:</h2>
         <p><a href="https://www.linkedin.com/in/nolan-jiang" className="underline">Linkedin</a> |{" "}
-        <a href="https://www.github/onion-eater" className="underline">GitHub</a> |{" "}
+        <a href="https://www.github.com/onion-eater" className="underline">GitHub</a> |{" "}
         <a href="mailto:nolanjiang@cmu.edu" className="underline">Email</a> |{" "}
         <a href="https://www.instagram.com/jiang_nolan/" className="underline">Instagram</a></p>
 
