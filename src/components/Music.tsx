@@ -11,7 +11,7 @@ export default function Music({ isDark }: { isDark: boolean }) {
     });
   }, []);
 
-  const href = data?.[0]?.url ?? "#";
+  const href = "https://www.last.fm/user/nolanjiang88";
   const label = data
     ? `${data[0].name} by ${data[0].artist["#text"]}`
     : "loading…";
