@@ -17,7 +17,11 @@ export default function Music({ isDark }: { isDark: boolean }) {
     : "loading…";
 
   return (
-    <div className={`fixed bottom-6 right-6 z-40 pointer-events-none ${isDark ? "dark" : ""}`}>
+    <div
+      className={`fixed bottom-6 right-6 z-40 pointer-events-none ${
+        isDark ? "dark" : ""
+      }`}
+    >
       <a
         href={href}
         target="_blank"
