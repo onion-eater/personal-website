@@ -15,10 +15,10 @@ export default function AboutPage() {
         </h1>
         <br></br>
         <h2>Find Me Here:</h2>
-        <p><a href="https://www.linkedin.com/in/nolan-jiang" className="underline">Linkedin</a> |{" "}
-        <a href="https://www.github.com/onion-eater" className="underline">GitHub</a> |{" "}
-        <a href="mailto:nolanjiang@cmu.edu" className="underline">Email</a> |{" "}
-        <a href="https://www.instagram.com/jiang_nolan/" className="underline">Instagram</a></p>
+        <p><a href="https://www.linkedin.com/in/nolan-jiang" className="underline hover:text-blue-500" target="_blank">Linkedin</a> |{" "}
+        <a href="https://www.github.com/onion-eater" className="underline hover:text-blue-500" target="_blank">GitHub</a> |{" "}
+        <a href="mailto:nolanjiang@cmu.edu" className="underline hover:text-blue-500" target="_blank">Email</a> |{" "}
+        <a href="https://www.instagram.com/jiang_nolan/" className="underline hover:text-blue-500" target="_blank">Instagram</a></p>
 
 
       </div>

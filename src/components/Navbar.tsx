@@ -10,16 +10,16 @@ export default function Navbar({ isDark, onToggle }: { isDark: boolean, onToggle
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-center h-16 items-center relative">
           <div className="hidden md:flex space-x-20 text-black dark:text-white">
-            <a href="/" className="hover:text-blue-500">
+            <a href="/" className="hover:underline">
               Home
             </a>
-            <a href="/about" className="hover:text-blue-500">
+            <a href="/about" className="hover:underline">
               About
             </a>
-            <a href="/projects" className="hover:text-blue-500">
+            <a href="/projects" className="hover:underline">
               Projects
             </a>
-            <DarkMode className="" isDarkMode={isDark} onToggle={onToggle} />
+            <DarkMode isDarkMode={isDark} onToggle={onToggle} />
           </div>
 
           <button
@@ -33,16 +33,16 @@ export default function Navbar({ isDark, onToggle }: { isDark: boolean, onToggle
       </div>
       {isOpen && (
         <div className="md:hidden px-4 pb-4 space-y-2 block flex flex-col text-black dark:text-white">
-          <a href="/" className="hover:text-blue-500">
+          <a href="/" className="hover:underline">
             Home
           </a>
-          <a href="/about" className="hover:text-blue-500">
+          <a href="/about" className="hover:underline">
             About
           </a>
-          <a href="/projects" className="hover:text-blue-500">
+          <a href="/projects" className="hover:underline">
             Projects
           </a>
-          <DarkMode className="" isDarkMode={isDark} onToggle={onToggle} />
+          <DarkMode isDarkMode={isDark} onToggle={onToggle}/>
         </div>
       )}
     </nav>
