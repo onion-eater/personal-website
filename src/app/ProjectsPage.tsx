@@ -8,14 +8,22 @@ export default function ProjectsPage() {
 
   return (
     <div className={isDark ? "dark" : ""}>
-      <div className="bg-white dark:bg-black flex justify-center h-screen w-screen">
+      <div className="bg-white dark:bg-black text-black dark:text-white min-h-screen w-full">
         <Navbar isDark={isDark} onToggle={() => setIsDark((prev) => !prev)} />
-        <div className="m-20">
+        <div className="max-w-5xl mx-auto px-6 py-24 space-y-10">
           <Project
             isDark={isDark}
             title="Personal Website"
             description="This website :)"
-            stack={["React", "TypeScript", "Tailwind CSS", "Three.js", "Vite", "Git", "Vercel"]}
+            stack={[
+              "React",
+              "TypeScript",
+              "Tailwind CSS",
+              "Three.js",
+              "Vite",
+              "Git",
+              "Vercel",
+            ]}
             github="https://github.com/onion-eater/personal-website"
             livelink="https://nolanjiang.com"
           />
@@ -23,7 +31,13 @@ export default function ProjectsPage() {
             isDark={isDark}
             title="Zenith"
             description="Chrome extension that blocks reels/other distractions on Instagram. Interactive and responsive UI built with HTML, CSS, and JavasScript."
-            stack={["HTML", "JavaScript", "CSS", "Chrome Extensions API", "Git"]}
+            stack={[
+              "HTML",
+              "JavaScript",
+              "CSS",
+              "Chrome Extensions API",
+              "Git",
+            ]}
             github="https://github.com/onion-eater/awesome-reels-blocker"
             livelink=""
           />

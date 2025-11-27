@@ -17,24 +17,21 @@ export default function Project({
   isDark,
 }: ProjectProps) {
   return (
-    // border, padding, rounded corners, max width, centered
-    
     <div
       className={`border ${
         isDark ? "border-white" : "border-black"
-      } p-4 rounded-lg max-w-md mx-auto my-4 flex-col`}
+      } p-3 rounded-lg max-w-xl mx-auto my-3 flex-col gap-2`}
     >
-      {/* <h1>hi {github} {livelink}</h1> */}
-      <div className="flex items-center justify-between">
+      <div className="flex items-start justify-between gap-3">
         <h1
-          className={`text-2xl font-bold mb-2 ${
+          className={`text-xl font-semibold ${
             isDark ? "text-white" : "text-black"
           }`}
         >
           {title}
         </h1>
 
-        <div className="flex gap-3">
+        <div className="flex gap-2 pt-0.5 shrink-0">
           {github && (
             <a
               href={github}
@@ -44,7 +41,7 @@ export default function Project({
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Github size={30} />
+              <Github size={22} />
             </a>
           )}
 
@@ -57,21 +54,17 @@ export default function Project({
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Link size={30} />
+              <Link size={22} />
             </a>
           )}
         </div>
       </div>
-      {/* <h2 className={`${
-            isDark ? "text-white" : "text-black"
-        }`}>
-        Built with: React, TypeScript, Tailwind CSS
-      </h2> */}
-      <div className="flex flex-wrap gap-2 mt-1 mb-4">
+
+      <div className="flex flex-wrap gap-1 mt-1 mb-2 text-xs">
         {stack.map((tech) => (
           <span
             key={tech}
-            className={`px-2 py-1 text-sm rounded-md border ${
+            className={`px-2 py-0.5 rounded border ${
               isDark
                 ? "border-gray-400 text-gray-200"
                 : "border-gray-500 text-gray-800"
@@ -81,7 +74,7 @@ export default function Project({
           </span>
         ))}
       </div>
-      <p className={`mb-4 ${isDark ? "text-gray-300" : "text-gray-700"}`}>
+      <p className={`text-sm leading-relaxed ${isDark ? "text-gray-300" : "text-gray-700"}`}>
         {description}
       </p>
     </div>

@@ -32,7 +32,7 @@ export default function Navbar({ isDark, onToggle }: { isDark: boolean, onToggle
         </div>
       </div>
       {isOpen && (
-        <div className="md:hidden px-4 pb-4 space-y-2 block flex flex-col text-black dark:text-white">
+        <div className="md:hidden px-4 pb-4 space-y-2 flex flex-col text-black dark:text-white">
           <a href="/" className="hover:underline">
             Home
           </a>
