@@ -52,8 +52,16 @@ export default function ProjectsPage() {
           <Project
             isDark={isDark}
             title="Koala"
-            description="Chrome extension using React and Chrome API that replaces distracting websites with AI-powered learning (e.g. flashcards and quizzes) with Gemini API. Live leaderboard built with Supabase, and responsive UI built with Tailwind CSS."
-            stack={["React", "JavaScript", "Tailwind CSS", "Chrome API", "Gemini API", "Supabase", "Git"]}
+            description="Chrome extension using React and Chrome Extensions API that replaces distracting websites with AI-powered learning (e.g. flashcards and quizzes) with Gemini API. Live leaderboard built with Supabase, and responsive UI built with Tailwind CSS."
+            stack={[
+              "React",
+              "JavaScript",
+              "Tailwind CSS",
+              "Chrome Extensions API",
+              "Gemini API",
+              "Supabase",
+              "Git",
+            ]}
             github="https://github.com/tkl0000/koala"
             livelink=""
           />
