@@ -6,7 +6,7 @@ export default function AboutPage() {
 
   return (
     <div className={isDark ? "dark" : ""}>
-    <div className="bg-white text-black dark:bg-black dark:text-white">
+    <div className="bg-white dark:bg-black text-black dark:text-white">
       <div className="min-h-screen flex flex-col items-center justify-center">
         <Navbar isDark={isDark} onToggle={() => setIsDark((prev) => !prev)} />
         <h1>

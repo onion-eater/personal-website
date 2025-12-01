@@ -17,15 +17,11 @@ export const DarkMode = ({ className, isDarkMode, onToggle }: props) => {
   const changeTheme = async () => {
     if (!buttonRef.current) return;
 
-    await document.startViewTransition(() => {
+    const transition = document.startViewTransition(() => {
       flushSync(() => {
         onToggle();
       });
-    }).ready;
-    document.documentElement.style.setProperty(
-      "--bg",
-      isDarkMode ? "black" : "white"
-    );
+    });
 
     const { top, left, width, height } =
       buttonRef.current.getBoundingClientRect();
@@ -36,7 +32,10 @@ export const DarkMode = ({ className, isDarkMode, onToggle }: props) => {
     const bottom = window.innerHeight - top;
     const maxRad = Math.hypot(Math.max(left, right), Math.max(top, bottom));
 
-    document.documentElement.animate(
+    await transition.ready;
+    document.documentElement.style.setProperty("--bg", isDarkMode ? "black" : "white");
+
+    const animation = document.documentElement.animate(
       {
         clipPath: [
           `circle(0px at ${x}px ${y}px)`,
@@ -49,7 +48,11 @@ export const DarkMode = ({ className, isDarkMode, onToggle }: props) => {
         pseudoElement: "::view-transition-new(root)",
       }
     );
+    await animation.finished;
+
+    document.documentElement.style.setProperty("--bg", isDarkMode ? "white" : "black");
   };
+
   return (
     <button
       ref={buttonRef}
