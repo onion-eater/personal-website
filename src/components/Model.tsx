@@ -8,6 +8,7 @@ import * as THREE from "three";
 export default function Model({ isDark }: { isDark: boolean }) {
   const meshRef = useRef<THREE.Mesh>(null!);
   const { viewport } = useThree();
+  const resolution = viewport.width < 6 ? 0.33 : 0.2;
 
   useFrame((_, delta) => {
     meshRef.current.rotation.y += delta * 0.2;
@@ -28,7 +29,7 @@ export default function Model({ isDark }: { isDark: boolean }) {
       </mesh>
       <OrbitControls enablePan={false} enableZoom={false} />
       <AsciiRenderer
-        resolution={typeof window !== "undefined" && window.innerWidth < 768 ? 0.32 : 0.2}
+        resolution={resolution}
         invert={false}
         characters=" nj"
         fgColor={isDark ? "white" : "black"}
