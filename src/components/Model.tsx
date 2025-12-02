@@ -28,7 +28,7 @@ export default function Model({ isDark }: { isDark: boolean }) {
       </mesh>
       <OrbitControls enablePan={false} enableZoom={false} />
       <AsciiRenderer
-        resolution={0.2}
+        resolution={typeof window !== "undefined" && window.innerWidth < 768 ? 0.32 : 0.2}
         invert={false}
         characters=" nj"
         fgColor={isDark ? "white" : "black"}
