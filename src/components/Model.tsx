@@ -9,6 +9,7 @@ export default function Model({ isDark }: { isDark: boolean }) {
   const meshRef = useRef<THREE.Mesh>(null!);
   const { viewport } = useThree();
   const resolution = viewport.width < 6 ? 0.33 : 0.2;
+  const scale = Math.min(viewport.width / 400, 0.03);
 
   useFrame((_, delta) => {
     meshRef.current.rotation.y += delta * 0.2;
@@ -24,7 +25,7 @@ export default function Model({ isDark }: { isDark: boolean }) {
 
   return (
     <>
-      <mesh geometry={geometry} scale={viewport.width / 400} ref={meshRef}>
+      <mesh geometry={geometry} scale={scale} ref={meshRef}>
         <meshStandardMaterial color="black" />
       </mesh>
       <OrbitControls enablePan={false} enableZoom={false} />
