@@ -1,9 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { DarkMode } from "./DarkMode";
 
 export default function Navbar({ isDark, onToggle }: { isDark: boolean, onToggle: () => void}) {
   const [isOpen, setIsOpen] = useState(false);
   console.log({isDark});
+
+  useEffect(() => {
+    document.documentElement.style.setProperty("--bg", isDark ? "black" : "white");
+  }, [isDark]);
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 ${isDark ? "dark" : ""}`}>

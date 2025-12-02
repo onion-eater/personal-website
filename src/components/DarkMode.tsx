@@ -33,7 +33,10 @@ export const DarkMode = ({ className, isDarkMode, onToggle }: props) => {
     const maxRad = Math.hypot(Math.max(left, right), Math.max(top, bottom));
 
     await transition.ready;
-    document.documentElement.style.setProperty("--bg", isDarkMode ? "black" : "white");
+    document.documentElement.style.setProperty(
+      "--bg",
+      isDarkMode ? "black" : "white"
+    );
 
     const animation = document.documentElement.animate(
       {
@@ -49,8 +52,10 @@ export const DarkMode = ({ className, isDarkMode, onToggle }: props) => {
       }
     );
     await animation.finished;
-
-    document.documentElement.style.setProperty("--bg", isDarkMode ? "white" : "black");
+    document.documentElement.style.setProperty(
+      "--bg",
+      !isDarkMode ? "black" : "white"
+    );
   };
 
   return (
