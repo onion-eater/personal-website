@@ -8,7 +8,8 @@ import * as THREE from "three";
 export default function Model({ isDark }: { isDark: boolean }) {
   const meshRef = useRef<THREE.Mesh>(null!);
   const { viewport } = useThree();
-  const resolution = viewport.width < 6 ? 0.33 : 0.2;
+  const isCompact = viewport.width < 6;
+  const resolution = isCompact ? 0.33 : 0.2;
   const scale = Math.min(viewport.width / 400, 0.03);
 
   useFrame((_, delta) => {
@@ -30,6 +31,7 @@ export default function Model({ isDark }: { isDark: boolean }) {
       </mesh>
       <OrbitControls enablePan={false} enableZoom={false} />
       <AsciiRenderer
+        key={isCompact ? "compact" : "wide"}
         resolution={resolution}
         invert={false}
         characters=" nj"

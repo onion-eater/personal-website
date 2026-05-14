@@ -12,8 +12,6 @@ export default function AboutPage() {
         <h1>
           My name is <u>Nolan Jiang</u>.
         </h1>
-
-
       </div>
     </div>
     </div>

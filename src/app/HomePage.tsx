@@ -13,7 +13,7 @@ export default function HomePage() {
   return (
     <div>
       <Navbar isDark={isDark} onToggle={() => setIsDark((prev) => !prev)} />
-      <Music isDark={isDark} />
+      {/* <Music isDark={isDark} /> */}
       <Canvas
         className={`${isDark ? "bg-black" : "bg-white"} w-full h-full`}
         style={{ position: "fixed", inset: 0, zIndex: 10 }}
