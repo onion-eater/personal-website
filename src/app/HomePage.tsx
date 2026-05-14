@@ -3,7 +3,6 @@ import { Canvas } from "@react-three/fiber";
 import useLocalStorage from "use-local-storage";
 
 import Navbar from "../components/Navbar";
-import Music from "../components/Music";
 import Model from "../components/Model";
 
 export default function HomePage() {

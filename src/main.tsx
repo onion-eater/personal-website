@@ -2,7 +2,6 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router";
 import "./index.css";
 import HomePage from "./app/HomePage.tsx";
-import AboutPage from "./app/AboutPage.tsx";
 import NotFoundPage from "./app/NotFoundPage.tsx";
 import ProjectsPage from "./app/ProjectsPage.tsx";
 
