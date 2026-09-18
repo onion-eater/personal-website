@@ -2,9 +2,18 @@
 
 This is my personal website.
 
+## Run locally
+
+```sh
+npm ci
+npm run dev
+```
+
+The local preview is at http://localhost:5173. `npm run build` checks TypeScript and builds the production site.
+
 ## Made using:
 - Vite + React + Typescript
-- Three.js for 3D Model thingy
+- Canvas 2D for the animated ASCII greeting
 - Last.fm API for music thingy
 - Vercel for hosting
 
@@ -13,7 +22,6 @@ This is my personal website.
   - perhaps playback through website?
   - ^ if implemented maybe an audio visualizer as well
 - create blog page + component?
-- do something about no gpu acceleration
 - dilly dally
 - discover something that doesnt exist/give a monkey a shower
 
