@@ -6,10 +6,14 @@ export default function HomePage() {
       <a className="skip-link" href="#content">skip to content</a>
       <Intro />
       <main className="site-content" id="content" tabIndex={-1}>
-        <section className="about-section" id="about" aria-labelledby="about-heading">
-          <h2 id="about-heading">about</h2>
-          <p>Hi, my name is Nolan. I enjoy doing things and other stuff, etc.</p>
-        </section>
+        <a
+          className="video-link"
+          href="https://youtube.com/watch?v=SWo72DkeL4A"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          https://youtube.com/watch?v=SWo72DkeL4A
+        </a>
       </main>
     </>
   );

@@ -159,7 +159,7 @@ export default function Intro() {
     <>
       <section className="hero" id="top" ref={heroRef} aria-label="Introduction">
         <h1 className="sr-only">Nolan Jiang</h1>
-        <a className="scroll-cue" href="#about" ref={arrowRef} aria-label="Scroll to about">
+        <a className="scroll-cue" href="#content" ref={arrowRef} aria-label="Scroll to link">
           <ArrowDown aria-hidden="true" />
         </a>
       </section>

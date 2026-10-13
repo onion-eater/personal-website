@@ -173,30 +173,19 @@ a {
 }
 
 .site-content {
+  display: grid;
+  place-items: center;
   min-height: 100svh;
-  padding: 112px 24px 48px;
+  padding: 100px 24px;
   overflow-anchor: none;
 }
 
-.about-section {
-  max-width: 640px;
-  margin: 0 auto;
-  padding: 20px 0 24px;
-  border-block: 1px solid var(--page-line);
-  scroll-margin-top: 100px;
-}
-
-.about-section h2 {
-  margin: 0 0 16px;
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.about-section p {
-  margin: 0;
-  max-width: 54ch;
-  line-height: 1.85;
-  color: var(--page-muted);
+.video-link {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  text-align: center;
+  color: #0000ee;
+  text-decoration: underline;
 }
 
 .not-found {
@@ -215,10 +204,6 @@ a {
   .site-links {
     right: 36px;
     gap: 26px;
-  }
-
-  .site-content {
-    padding: 132px 56px 64px;
   }
 
 }
