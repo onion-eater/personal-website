@@ -1,8 +1,16 @@
 {
   "routes": [
     {
-      "src": "/[^.]+",
-      "dest": "/"
+      "src": "^/(?:projects/?|index\\.html)$",
+      "status": 308,
+      "headers": { "Location": "/" }
+    },
+    { "handle": "filesystem" },
+    {
+      "src": "/.*",
+      "dest": "/index.html",
+      "status": 404,
+      "headers": { "X-Robots-Tag": "noindex" }
     }
   ]
 }
